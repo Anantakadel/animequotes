@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Quotes </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgb(250, 203, 203);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #627e9b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #quotes {
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            height: 100px; /* Set fixed height for smoother transitions */
+        }
+        #loading {
+            display: none;
+            margin: 20px;
+            font-size: 1.2em;
+            color: #999;
+        }
+        .navigation {
+            margin: 20px 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Get Anime Quotes</h1>
+        <input type="text" id="animeName" placeholder="Enter anime name (e.g., Naruto)">
+        <button id="fetchQuotes">Fetch Quotes</button>
+        <p id="loading">Fetching quotes...</p>
+
+        <!-- Display area for quotes -->
+        <div id="quotes"></div>
+
+        <!-- Navigation buttons -->
+        <div class="navigation hidden" id="navigationButtons">
+            <button id="prevQuote">Previous Quote</button>
+            <button id="nextQuote">Next Quote</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
